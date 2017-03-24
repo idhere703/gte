@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
-import logo from './house-logo.jpg';
+import {
+  Navbar,
+  Nav,
+  NavItem,
+  Grid,
+  Row,
+  Col
+ } from 'react-bootstrap'
+import logo from './space-logo.jpg';
 import './App.css';
 import { render } from 'react-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -19,11 +27,43 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome!</h2>
-          <h3>Why is there a picture of a house? Shut up.</h3>
-        </div>
+
+        <Grid>
+          <Row className="show-grid App-logo">
+            <Col>
+              <div className="App-header">
+                <Navbar collapseOnSelect>
+                  <Navbar.Header>
+                    <Navbar.Brand>
+                      <a href="#">(GTE) Got To Eat</a>
+                    </Navbar.Brand>
+                    <Navbar.Toggle />
+                  </Navbar.Header>
+                  <Navbar.Collapse>
+                    <Nav>
+                      <NavItem eventKey={1} href="#">Link</NavItem>
+                      <NavItem eventKey={2} href="#">Link</NavItem>
+                    </Nav>
+                    <Nav pullRight>
+                      <NavItem eventKey={1} href="#">Link Right</NavItem>
+                    </Nav>
+                  </Navbar.Collapse>
+                </Navbar>
+
+                <h2>Welcome!</h2>
+                <h3>Why is there a picture of space? Shut up.</h3>
+
+              </div>
+            </Col>
+
+          </Row>
+
+          <Row>
+
+          </Row>
+
+        </Grid>
+
         <div className="App-body">
           <Tabs
             onSelect={this.handleSelect}
