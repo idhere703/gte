@@ -7,18 +7,33 @@ import {
   Row,
   Col
  } from 'react-bootstrap'
-import logo from './space-logo.jpg';
 import './App.css';
-import { render } from 'react-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 class App extends Component {
+  getFoodContent = () => {
+    return (
+      <div>
+        Yum food.
+      </div>
+    );
+  };
 
-  constructor(props) {
-    super(props);
-    // Don't like the defaults?
-    // Tabs.setUseDefaultStyles(false);
-  }
+  getTravelContent = () => {
+    return (
+      <div>
+        Where am I anyway...
+      </div>
+    );
+  };
+
+  getHealthContent = () => {
+    return (
+      <div>
+        What do you mean I'm not covered?!
+      </div>
+    );
+  };
 
   handleSelect = (index, last) => {
     console.log('Selected tab: ' + index + ', Last tab: ' + last);
@@ -77,13 +92,13 @@ class App extends Component {
             </TabList>
             {/* Content for tabs. */}
             <TabPanel>
-              Yum food.
+              {this.getFoodContent()}
             </TabPanel>
             <TabPanel>
-              What do you mean I'm not covered?!
+              {this.getHealthContent()}
             </TabPanel>
             <TabPanel>
-              Where am I anyway...
+              {this.getTravelContent()}
             </TabPanel>
           </Tabs>
         </div>
