@@ -9,6 +9,7 @@ import {
  } from 'react-bootstrap'
 import './App.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import socialLinks from './socialMediaLinks';
 
 class App extends Component {
   getFoodContent = () => {
@@ -60,7 +61,19 @@ class App extends Component {
                       <NavItem eventKey={2} href="#">Link</NavItem>
                     </Nav>
                     <Nav pullRight>
-                      <NavItem eventKey={1} href="#">Link Right</NavItem>
+                        <NavItem href={socialLinks.facebook}>
+                          <i className="fa fa-facebook-square" aria-hidden="true"></i>
+                        </NavItem>
+                        <NavItem href={socialLinks.github}>
+                          <i className="fa fa-github-square" aria-hidden="true"></i>
+
+                        </NavItem>
+                        <NavItem href={socialLinks.instagram}>
+                          <i className="fa fa-instagram" aria-hidden="true"></i>
+                        </NavItem>
+                        <NavItem href={socialLinks.snapchat}>
+                          <i className="fa fa-snapchat" aria-hidden="true"></i>
+                        </NavItem>
                     </Nav>
                   </Navbar.Collapse>
                 </Navbar>
