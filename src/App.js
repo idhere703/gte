@@ -56,24 +56,17 @@ class App extends Component {
                     <Navbar.Toggle />
                   </Navbar.Header>
                   <Navbar.Collapse>
-                    <Nav>
-                      <NavItem eventKey={1} href="#">Link</NavItem>
-                      <NavItem eventKey={2} href="#">Link</NavItem>
-                    </Nav>
                     <Nav pullRight>
-                        <NavItem href={socialLinks.facebook}>
-                          <i className="fa fa-facebook-square" aria-hidden="true"></i>
-                        </NavItem>
-                        <NavItem href={socialLinks.github}>
-                          <i className="fa fa-github-square" aria-hidden="true"></i>
-
-                        </NavItem>
-                        <NavItem href={socialLinks.instagram}>
-                          <i className="fa fa-instagram" aria-hidden="true"></i>
-                        </NavItem>
-                        <NavItem href={socialLinks.snapchat}>
-                          <i className="fa fa-snapchat" aria-hidden="true"></i>
-                        </NavItem>
+                      {
+                        Object.keys(socialLinks).map((socialLink) => {
+                          console.log(socialLink);
+                          return (
+                            <NavItem href={socialLinks[socialLink].siteLink}>
+                              <i className={`${socialLinks[socialLink].classInfo} social-links`} aria-hidden="true"></i>
+                            </NavItem>
+                          );
+                        })
+                      }
                     </Nav>
                   </Navbar.Collapse>
                 </Navbar>
