@@ -61,7 +61,7 @@ class App extends Component {
                         Object.keys(socialLinks).map((socialLink) => {
                           console.log(socialLink);
                           return (
-                            <NavItem href={socialLinks[socialLink].siteLink}>
+                            <NavItem href={socialLinks[socialLink].siteLink} onClick={() => {window.open(socialLinks[socialLink].siteLink);}}>
                               <i className={`${socialLinks[socialLink].classInfo} social-links`} aria-hidden="true"></i>
                             </NavItem>
                           );
