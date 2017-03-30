@@ -5,7 +5,9 @@ import {
   NavItem,
   Grid,
   Row,
-  Col
+  Col,
+  ListGroup,
+  ListGroupItem
  } from 'react-bootstrap'
 import './App.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -15,7 +17,11 @@ class App extends Component {
   getFoodContent = () => {
     return (
       <div>
-        Yum food.
+        <ListGroup>
+          <ListGroupItem>Yum food.</ListGroupItem>
+          <ListGroupItem>Wish there was more.</ListGroupItem>
+          <ListGroupItem>Wonder if there are any good places to eat around here.</ListGroupItem>
+        </ListGroup>
       </div>
     );
   };
@@ -23,7 +29,11 @@ class App extends Component {
   getTravelContent = () => {
     return (
       <div>
-        Where am I anyway...
+        <ListGroup>
+          <ListGroupItem>Where am I anyway...</ListGroupItem>
+          <ListGroupItem>I suppose it really doesn't matter...</ListGroupItem>
+          <ListGroupItem>Help!!!!</ListGroupItem>
+        </ListGroup>
       </div>
     );
   };
@@ -31,7 +41,11 @@ class App extends Component {
   getHealthContent = () => {
     return (
       <div>
-        What do you mean I'm not covered?!
+        <ListGroup>
+          <ListGroupItem>What do you mean I'm not covered?!</ListGroupItem>
+          <ListGroupItem>I'll sue!</ListGroupItem>
+          <ListGroupItem>... What do you mean I need coverage to sue!</ListGroupItem>
+        </ListGroup>
       </div>
     );
   };
@@ -48,7 +62,7 @@ class App extends Component {
           <Row className="show-grid App-logo">
             <Col>
               <div className="App-header">
-                <Navbar collapseOnSelect>
+                <Navbar bsStyle="inverse" collapseOnSelect>
                   <Navbar.Header>
                     <Navbar.Brand>
                       <a href="#">(GTE) Got To Eat</a>
@@ -78,11 +92,6 @@ class App extends Component {
             </Col>
 
           </Row>
-
-          <Row>
-
-          </Row>
-
         </Grid>
 
         <div className="App-body">
