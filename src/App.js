@@ -7,7 +7,9 @@ import {
   Row,
   Col,
   ListGroup,
-  ListGroupItem
+  ListGroupItem,
+  Thumbnail,
+  Button
  } from 'react-bootstrap'
 import './App.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -17,11 +19,40 @@ class App extends Component {
   getFoodContent = () => {
     return (
       <div>
-        <ListGroup>
-          <ListGroupItem>Yum food.</ListGroupItem>
-          <ListGroupItem>Wish there was more.</ListGroupItem>
-          <ListGroupItem>Wonder if there are any good places to eat around here.</ListGroupItem>
-        </ListGroup>
+        <Grid>
+          <Row>
+            <Col xs={6} md={4}>
+              <Thumbnail src="http://placekitten.com/200/300" alt="242x200">
+                <h3>Thumbnail label</h3>
+                <p>Description</p>
+                <p>
+                  <Button bsStyle="primary">Button</Button>&nbsp;
+                  <Button bsStyle="default">Button</Button>
+                </p>
+              </Thumbnail>
+            </Col>
+            <Col xs={6} md={4}>
+              <Thumbnail src="http://placekitten.com/200/350" alt="242x200">
+                <h3>Thumbnail label</h3>
+                <p>Description</p>
+                <p>
+                  <Button bsStyle="primary">Button</Button>&nbsp;
+                  <Button bsStyle="default">Button</Button>
+                </p>
+              </Thumbnail>
+            </Col>
+            <Col xs={6} md={4}>
+              <Thumbnail src="http://placekitten.com/300/300" alt="242x200">
+                <h3>Thumbnail label</h3>
+                <p>Description</p>
+                <p>
+                  <Button bsStyle="primary">Button</Button>&nbsp;
+                  <Button bsStyle="default">Button</Button>
+                </p>
+              </Thumbnail>
+            </Col>
+            </Row>
+        </Grid>
       </div>
     );
   };
