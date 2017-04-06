@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './App.css';
-import socialLinks from './socialMediaLinks';
 import $ from 'jquery';
 import SocialMediaLinks from './components/socialMedia';
 

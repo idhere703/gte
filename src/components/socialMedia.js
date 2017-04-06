@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import socialMedia from '../socialMediaLinks';
+import socialMedia from '../data/socialMediaLinks';
 
 class SocialMediaLinks extends Component {
 
