@@ -59,7 +59,7 @@ class App extends Component {
                 Menu
                 <i className="fa fa-bars"></i>
               </button>
-              <a className="navbar-brand" href="index.html">Start Bootstrap</a>
+              <a className="navbar-brand" href="index.html"></a>
             </div>
 
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
