@@ -21,7 +21,7 @@ class BlogPosts extends Component {
                 </a>
                 <p className="post-meta">Posted by
                   <a href="#">{post.postedBy}</a>
-                  {post.postedAt}
+                   {post.postedAt}
                 </p>
               </div>
               <hr/>
