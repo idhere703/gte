@@ -1,15 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 import socialMedia from '../data/socialMediaLinks';
 
-class SocialMediaLinks extends Component {
+class SocialMediaLinks extends React.Component {
 
-  render() {
-    return (
+    render() {
+        return (
       <div>
         <ul className="list-inline text-center">
-          {socialMedia.map((social) => {
-            return (
-              <li>
+          {socialMedia.map((social, index) => {
+              return (
+              <li key={`social-${index}`}>
                 <a href={social.siteLink}>
                   <span className="fa-stack fa-lg">
                     <i className="fa fa-circle fa-stack-2x"></i>
@@ -17,12 +17,12 @@ class SocialMediaLinks extends Component {
                   </span>
                 </a>
               </li>
-            );
+              );
           })}
         </ul>
       </div>
-    );
-  }
+        );
+    }
 }
 
 export default SocialMediaLinks;
