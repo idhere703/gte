@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import $ from 'jquery';
+// import $ from 'jquery';
 import SocialMediaLinks from './components/socialMedia';
 import BlogPosts from './components/blogPosts';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Link
+// } from 'react-router-dom';
 
 // TODO: Put this in. Do it, do it now.
 // // Floating label headings for the contact form
