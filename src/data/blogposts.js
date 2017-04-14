@@ -1,7 +1,7 @@
 // HACK: Importing react so I can store the JSX content.
 import React from 'react';
 
-// TODO: Should probably move this to a DB. Mongodb?
+// TODO: Should probably move this to a DB. Mongodb? MERN sounds so stupid though.
 export default [
   {
     title: 'Man must explore, and this is exploration at its greatest',
@@ -61,11 +61,5 @@ export default [
     postedBy: ' Me me me ',
     postedAt: ' on August 15, 2014',
     id: 3
-  }, {
-    title: '',
-    subtitle: '',
-    postedBy: '',
-    postedAt: '',
-    id: 4
   }
 ];
