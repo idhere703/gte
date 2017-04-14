@@ -1,36 +1,35 @@
 import React from 'react';
 import blogData from '../data/blogposts';
+import { Link } from 'react-router-dom';
 
 
 class BlogPosts extends React.Component {
 
-    render() {
-        return (
-          <div>
-            {blogData.map((post, index) => {
-                return (
-                <div key={`blogpreview-${index}`}>
-                  <div className="post-preview">
-                    <a href="post.html">
-                      <h2 className="post-title">
-                        {post.title}
-                      </h2>
-                      <h3 className="post-subtitle">
-                        {post.subtitle}
-                      </h3>
+  render() {
+    return (
+      <div>
+        { blogData.map((post, index) => {
+            return (
+              <div key={ `blogpreview-${index}` }>
+                <div className="post-preview">
+                  <Link to={ `/post/${post.id}` }>
+                  <h2 className="post-title">{ post.title }</h2>
+                  <h3 className="post-subtitle">{ post.subtitle }</h3>
+                  </Link>
+                  <p className="post-meta">Posted by
+                    <a href="#">
+                      { post.postedBy }
                     </a>
-                    <p className="post-meta">Posted by
-                      <a href="#">{post.postedBy}</a>
-                      {post.postedAt}
-                    </p>
-                  </div>
-                  <hr/>
+                    { post.postedAt }
+                  </p>
                 </div>
-                );
-            })}
-          </div>
-        );
-    }
+                <hr/>
+              </div>
+              );
+          }) }
+      </div>
+      );
+  }
 }
 
 export default BlogPosts;
