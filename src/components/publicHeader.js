@@ -10,7 +10,7 @@ class PublicHeader extends React.Component {
                       <span className="sr-only">Toggle navigation</span> Menu
                       <i className="fa fa-bars"></i>
                     </button>
-                    <a className="navbar-brand" href="index.html">GTE</a>
+                    <a className="navbar-brand" href="/">GTE</a>
                   </div>
                   <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul className="nav navbar-nav navbar-right">
