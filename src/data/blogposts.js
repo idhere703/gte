@@ -19,7 +19,7 @@ export default [
 
   }, {
     title: 'A wonderful serenity has taken possession of my entire soul',
-    subtitle: ', like these sweet mornings of spring which I enjoy with my whole heart.',
+    subtitle: 'like these sweet mornings of spring which I enjoy with my whole heart.',
     postedBy: ' Someone ',
     postedAt: '  on August 24, 2018 ',
     postId: 2,
