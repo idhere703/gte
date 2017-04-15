@@ -1,5 +1,6 @@
 import Post from './components/post';
 import About from './components/about';
+import Contact from './components/contact';
 
 export default [
     {
@@ -9,5 +10,9 @@ export default [
     {
         path: '/post/:id',
         component: Post
+    },
+    {
+        path: '/contact',
+        component: Contact
     }
 ];

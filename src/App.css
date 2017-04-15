@@ -418,7 +418,10 @@ body {
   background-image: url('img/about-bg.jpg');
 }
 
-/* HACK: I really didn't need to comment this did I? */
-.hacking-photo-display {
-  background-image: url('img/post-sample-image.jpg')
+.contact-header-image {
+  background-image: url('img/contact-bg.jpg');
+}
+
+.contactMe-container {
+  text-align: center;
 }
