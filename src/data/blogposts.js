@@ -8,6 +8,7 @@ export default [
     subtitle: 'Problems look mighty small from 150 miles up',
     postedBy: ' My girl my girl my girl ',
     postedAt: ' on September 24, 2014 ',
+    imgPath: '/img/post-bg.jpg',
     id: 0,
     content: (<div>
                 <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in

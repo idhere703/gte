@@ -1,13 +1,11 @@
 import React from 'react';
 import BlogPosts from './blogPosts';
-import PublicHeader from './publicHeader';
-import PublicFooter from './publicFooter';
+
 
 class LandingPage extends React.Component {
     render() {
         return (
             <div>
-              <PublicHeader></PublicHeader>
               <header className="intro-header header-image">
                 <div className="container">
                   <div className="row">
@@ -34,7 +32,6 @@ class LandingPage extends React.Component {
                 </div>
               </div>
               <hr/>
-              <PublicFooter></PublicFooter>
             </div>
             );
     }

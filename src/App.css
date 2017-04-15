@@ -409,3 +409,12 @@ body {
 .header-image {
   background-image: url('img/deskSetup-bg.jpg');
 }
+
+.post-header-image {
+  background-image: url('img/post-bg.jpg');
+}
+
+/* HACK: I really didn't need to comment this did I? */
+.hacking-photo-display {
+  background-image: url('img/post-sample-image.jpg')
+}

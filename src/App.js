@@ -3,6 +3,7 @@ import './App.css';
 import navigationInit from './data/navigationInit';
 import Router from './Router';
 import routes from './Routes';
+import PublicFooter from './components/publicFooter';
 
 class App extends React.Component {
 
@@ -15,6 +16,7 @@ class App extends React.Component {
       <div className="App">
         <Router routes={ routes }>
         </Router>
+        <PublicFooter></PublicFooter>
       </div>
       );
   }

@@ -1,16 +1,34 @@
 import React from 'react';
+import BlogPosts from '../data/blogposts';
 
 class Post extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+
+    this.state = {
+      ...this.getDbProps(props.match.params.id)
+    };
+    console.log('this.state', this.state, this.getDbProps(props.match.params.id));
+
+
+  }
+
+  getDbProps(postId) {
+    return BlogPosts.find((post) => post.id == postId);
+  }
+
   render() {
     return (<div>
-              <header className="intro-header" style={ { backgroundImage: `url(${this.props.imgPath})` } }>
+              <header className="intro-header post-header-image">
                 <div className="container">
                   <div className="row">
                     <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                       <div className="post-heading">
-                        <h1>{ this.props.headingTitle }</h1>
-                        <h2 className="subheading">{ this.props.subheadingTitle }</h2>
-                        <span className="meta">Posted by <a href="#">{ this.props.postedBy }</a> on { this.props.postedDate }</span>
+                        <h1>{ this.state.title }</h1>
+                        <h2 className="subheading">{ this.state.subtitle }</h2>
+                        <span className="meta">Posted by <a href="#">{ this.state.postedBy }</a> on { this.state.postedAt }</span>
                       </div>
                     </div>
                   </div>
@@ -20,7 +38,7 @@ class Post extends React.Component {
                 <div className="container">
                   <div className="row">
                     <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                      { this.props.postContent }
+                      { this.state.content }
                     </div>
                   </div>
                 </div>

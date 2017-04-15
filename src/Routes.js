@@ -1,10 +1,10 @@
 import Post from './components/post';
-import LandingPage from './components/main';
+import About from './components/about';
 
 export default [
     {
-        path: '/',
-        component: LandingPage
+        path: '/about',
+        component: About
     },
     {
         path: '/post/:id',
