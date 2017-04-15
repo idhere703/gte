@@ -410,10 +410,6 @@ body {
   background-image: url('img/deskSetup-bg.jpg');
 }
 
-.post-header-image {
-  background-image: url('img/post-bg.jpg');
-}
-
 .about-header-image {
   background-image: url('img/about-bg.jpg');
 }
@@ -424,4 +420,21 @@ body {
 
 .contactMe-container {
   text-align: center;
+}
+
+/* HACK: Need to fix the build process to allow for the dynamic processing of header images. */
+.post-header-space {
+  background-image: url('img/post-bg.jpg');
+}
+
+.post-header-cisero {
+  background-image: url('img/cicero.jpg');
+}
+
+.post-header-werther {
+  background-image: url('img/werther.jpg');
+}
+
+.post-header-kafka {
+  background-image: url('img/kafka.jpg');
 }

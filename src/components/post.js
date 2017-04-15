@@ -16,7 +16,7 @@ class Post extends React.Component {
 
   render() {
     return (<div>
-              <header className="intro-header post-header-image">
+              <header className={ `intro-header ${this.state.imgClass}` }>
                 <div className="container">
                   <div className="row">
                     <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
