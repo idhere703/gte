@@ -5,18 +5,13 @@ class Post extends React.Component {
 
   constructor(props) {
     super(props);
-
-
     this.state = {
       ...this.getDbProps(props.match.params.id)
     };
-    console.log('this.state', this.state, this.getDbProps(props.match.params.id));
-
-
   }
 
   getDbProps(postId) {
-    return BlogPosts.find((post) => post.id == postId);
+    return BlogPosts.find((post) => post.id.toString() === postId);
   }
 
   render() {

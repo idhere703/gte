@@ -10,8 +10,8 @@ class Router extends React.Component {
                     <PublicHeader></PublicHeader>
                     <Switch>
                       <Route exact path='/' component={ LandingPage } />
-                      { this.props.routes.map((route) => {
-                            return (<Route path={ route.path } component={ route.component } />);
+                      { this.props.routes.map((route, index) => {
+                            return (<Route key={ `route-${index}` } path={ route.path } component={ route.component } />);
                         }) }
                     </Switch>
                   </div>
