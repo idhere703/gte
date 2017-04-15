@@ -1,6 +1,3 @@
-// HACK: Importing react so I can store the JSX content.
-import React from 'react';
-
 // TODO: Should probably move this to a DB. Mongodb? MERN sounds so stupid though.
 export default [
   {
@@ -10,7 +7,7 @@ export default [
     postedAt: ' on September 24, 2014 ',
     imgPath: '/img/post-bg.jpg',
     id: 0,
-    content: (<div>
+    content: (`<div>
                 <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in
                   which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals.
                   The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
@@ -42,7 +39,7 @@ export default [
                 <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration
                   at its greatest.</p>
                 <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
-              </div>)
+              </div>`)
   }, {
     title: 'I believe every human has a finite number of heartbeats. I don\'t intend to waste any of mine.',
     subtitle: '',
