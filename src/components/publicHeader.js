@@ -21,7 +21,7 @@ class PublicHeader extends React.Component {
                         <a href="/about">About</a>
                       </li>
                       <li>
-                        <a href="post/0">Sample Post</a>
+                        <a href="post/0">Latest Post</a>
                       </li>
                       <li>
                         <a href="/contact">Contact</a>
