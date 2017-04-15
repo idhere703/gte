@@ -11,7 +11,7 @@ class Post extends React.Component {
   }
 
   getDbProps(postId) {
-    return BlogPosts.find((post) => post.id.toString() === postId);
+    return BlogPosts.find((post) => post.postId.toString() === postId);
   }
 
   render() {
