@@ -12,7 +12,7 @@ class BlogPosts extends React.Component {
             return (
               <div key={ `blogpreview-${index}` }>
                 <div className="post-preview">
-                  <Link to={ `/post/${post.id}` }>
+                  <Link to={ `/post/${post.postId}` }>
                   <h2 className="post-title">{ post.title }</h2>
                   <h3 className="post-subtitle">{ post.subtitle }</h3>
                   </Link>
