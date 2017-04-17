@@ -17,9 +17,9 @@ class BlogPosts extends React.Component {
                   <h3 className="post-subtitle">{ post.subtitle }</h3>
                   </Link>
                   <p className="post-meta">Posted by
-                    <a href="#">
-                      { post.postedBy }
-                    </a>
+                    <Link to="#">
+                    { post.postedBy }
+                    </Link>
                     { post.postedAt }
                   </p>
                 </div>

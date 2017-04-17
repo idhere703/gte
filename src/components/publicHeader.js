@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class PublicHeader extends React.Component {
   render() {
@@ -10,21 +11,21 @@ class PublicHeader extends React.Component {
                       <span className="sr-only">Toggle navigation</span> Menu
                       <i className="fa fa-bars"></i>
                     </button>
-                    <a className="navbar-brand" href="/">GTE</a>
+                    <Link className="navbar-brand" to="/">GTE</Link>
                   </div>
                   <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul className="nav navbar-nav navbar-right">
                       <li>
-                        <a href="/">Home</a>
+                        <Link to="/">Home</Link>
                       </li>
                       <li>
-                        <a href="/about">About</a>
+                        <Link to="/about">About</Link>
                       </li>
                       <li>
-                        <a href="post/0">Latest Post</a>
+                        <Link to="post/0">Latest Post</Link>
                       </li>
                       <li>
-                        <a href="/contact">Contact</a>
+                        <Link to="/contact">Contact</Link>
                       </li>
                     </ul>
                   </div>
