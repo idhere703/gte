@@ -24,11 +24,11 @@ class LandingPage extends React.Component {
           <div className="row">
             <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
               <BlogPosts></BlogPosts>
-              <ul className="pager">
-                <li className="next">
-                  <Link to="#">Older Posts →</Link>
-                </li>
-              </ul>
+              { /*<ul className="pager">
+                                            <li className="next">
+                                              <Link to="#">Older Posts →</Link>
+                                            </li>
+                                          </ul>*/ }
             </div>
           </div>
         </div>
