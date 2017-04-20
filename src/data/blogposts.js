@@ -1,5 +1,7 @@
 // TODO: Should probably move this to a DB. Mongodb? MERN sounds so stupid though.
-export default [
+
+const PostModel = {};
+const posts = [
   {
     title: 'Man must explore, and this is exploration at its greatest',
     subtitle: 'Problems look mighty small from 150 miles up',
@@ -35,4 +37,26 @@ export default [
     content: ('<p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p> <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What\'s happened to me? " he thought. It wasn\'t a dream.</p> <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p> <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops</p>')
   }
 ];
+
+
+PostModel.getPosts = () => {
+  return posts;
+};
+
+/**
+ * Gets a single post.
+ * @param {String} id   A post id passed as a string.
+ * @return {Object}     The post that matches the passed id. Or undefined if not found.
+ */
+PostModel.getPost = (id) => {
+  return posts.find((post) => id === post.postId.toString());
+};
+
+PostModel.getMostRecentPost = () => {
+  // Normally we would do this by postedAt. But I don't feel like mocking the data _that_ well.
+  // #lazyDemo? I actually hate the '#' craze that's going on right now. That was a sarcastic '#'.
+  return posts[0];
+};
+
+export default PostModel;
 

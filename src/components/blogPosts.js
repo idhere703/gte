@@ -8,7 +8,7 @@ class BlogPosts extends React.Component {
   render() {
     return (
       <div>
-        { blogData.map((post, index) => {
+        { blogData.getPosts().map((post, index) => {
             return (
               <div key={ `blogpreview-${index}` }>
                 <div className="post-preview">

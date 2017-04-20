@@ -1,6 +1,5 @@
 import React from 'react';
 import BlogPosts from './blogPosts';
-// import { Link } from 'react-router-dom';
 
 
 class LandingPage extends React.Component {
