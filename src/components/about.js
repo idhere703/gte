@@ -1,5 +1,4 @@
 import React from 'react';
-import Timeline from './timeline';
 
 
 class About extends React.Component {
@@ -33,12 +32,6 @@ class About extends React.Component {
                 </div>
                 <div className="row">
                   <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <h1>Timeline! Well, it's supposed to be anyway. I'll fix it.</h1>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <Timeline></Timeline>
                   </div>
                 </div>
               </div>
