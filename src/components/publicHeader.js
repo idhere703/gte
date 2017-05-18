@@ -23,7 +23,7 @@ class PublicHeader extends React.Component {
                         <Link to="/about">About</Link>
                       </li>
                       <li>
-                        <Link to={ `post/${blogData.getMostRecentPost().postId}` }>Latest Post</Link>
+                        <Link to={ `/post/${blogData.getMostRecentPost().postId}` }>Latest Post</Link>
                       </li>
                       <li>
                         <Link to="/contact">Contact</Link>
