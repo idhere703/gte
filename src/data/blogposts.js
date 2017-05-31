@@ -57,6 +57,14 @@ PostModel.getPosts = () => {
  * @return {Object}     The post that matches the passed id. Or undefined if not found.
  */
 PostModel.getPost = (id) => {
+  fetch(`http://127.0.0.1:8000/posts/${id}`)
+    .then(function(response) {
+      return response.json();
+    }).then(function(json) {
+    console.log('parsed json', json);
+  }).catch(function(ex) {
+    console.log('parsing failed', ex);
+  });
   return posts.find((post) => id === post.postId.toString());
 };
 
