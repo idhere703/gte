@@ -1,5 +1,7 @@
 import React from 'react';
 import BlogPosts from '../data/blogposts';
+import Comments from './comments';
+console.log('Comments', Comments);
 
 class Post extends React.Component {
 
@@ -38,6 +40,7 @@ class Post extends React.Component {
                   </div>
                 </div>
               </article>
+              <Comments postId={ this.state.postId }></Comments>
             </div>);
   }
 }
