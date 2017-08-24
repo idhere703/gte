@@ -5,10 +5,25 @@ import { Link } from 'react-router-dom';
 
 class BlogPosts extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      blogData: []
+    };
+    blogData.getPosts().then(data => {
+      console.log(data);
+      this.setState({
+        blogData: data
+      });
+    });
+  }
+
+
+
   render() {
     return (
       <div>
-        { blogData.getPosts().map((post, index) => {
+        { this.state.blogData.map((post, index) => {
             return (
               <div key={ `blogpreview-${index}` }>
                 <div className="post-preview">

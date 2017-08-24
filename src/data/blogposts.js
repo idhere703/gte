@@ -1,5 +1,4 @@
-// TODO: Should probably move this to a DB. Mongodb? MERN sounds so stupid though.
-
+// TODO: Should probably move this to a DB. Mongodb? MERN sounds so stupid though... Or does it...
 const PostModel = {};
 const posts = [
   {
@@ -40,15 +39,15 @@ const posts = [
 
 
 PostModel.getPosts = () => {
-  // fetch('http://127.0.0.1:8000/posts/')
-  //   .then(function(response) {
-  //     return response.json();
-  //   }).then(function(json) {
-  //   console.log('parsed json', json);
-  // }).catch(function(ex) {
-  //   console.log('parsing failed', ex);
-  // });
-  return posts;
+  return fetch('http://127.0.0.1:8000/posts/')
+    .then(function(response) {
+      return response.json();
+    }).then(function(json) {
+    console.log('parsed json', json);
+  }).catch(function(ex) {
+    console.log('parsing failed', ex);
+  });
+// return posts;
 };
 
 /**
