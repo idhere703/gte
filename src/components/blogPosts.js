@@ -8,14 +8,9 @@ class BlogPosts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      blogData: []
+      blogData: blogData.getPosts()
     };
-    blogData.getPosts().then(data => {
-      console.log(data);
-      this.setState({
-        blogData: data
-      });
-    });
+
   }
 
 
@@ -23,7 +18,7 @@ class BlogPosts extends React.Component {
   render() {
     return (
       <div>
-        { this.state.blogData.map((post, index) => {
+        { this.state.blogData && this.state.blogData.length && this.state.blogData.map((post, index) => {
             return (
               <div key={ `blogpreview-${index}` }>
                 <div className="post-preview">
