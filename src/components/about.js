@@ -24,10 +24,8 @@ class About extends React.Component {
                     <p>Hi there! I'm Brandon, a "full stack" developer (as if that means anything anymore) with about 5 years of experience in the field of software development.
                       Native to SC living in Charleston for my entire life.</p>
                     <p>In my free time you can find me outside exploring the world (pro tip, bring bug spray and sunscreen), hanging out with close friends and generally living
-                      a very fufilling and well rounded life... I'm not a crazy person, I swear. <i>said every crazy person ever</i></p>
-                    <p>If you would like to contact me, please don't use the contact page, as I haven't actually hooked up content for it yet. And I'll probably get rid of it.
-                      Try Linked instead.</p>
-                    <p>P.S: I got the theme for this blog from Start Bootstrap. Also that image came from them so if it's stolen I didn't do it.</p>
+                      a very fulfilling and well rounded life... I'm not a crazy person, I swear. <i>Said every crazy person ever.</i></p>
+                    <p>If you would like to contact me, please use the contact page. Or you could shout... I might hear you.</p>
                   </div>
                 </div>
                 <div className="row">
