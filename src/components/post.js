@@ -1,5 +1,6 @@
 import React from 'react';
 import BlogPosts from '../data/blogposts';
+import Comments from './comments';
 
 class Post extends React.Component {
 
@@ -38,6 +39,8 @@ class Post extends React.Component {
                   </div>
                 </div>
               </article>
+              <hr/>
+              <Comments postId={ this.props.match.params.id }></Comments>
             </div>);
   }
 }
