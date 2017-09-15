@@ -42,8 +42,6 @@ const comments = [
         postId: 2,
         content: ('Ah, you\'re one of those....')
     },
-
-
     {
         commentId: 6,
         postedBy: ' Other person ',
@@ -65,8 +63,6 @@ const comments = [
         postId: 3,
         content: ('I hate you.')
     },
-
-
 ];
 
 
