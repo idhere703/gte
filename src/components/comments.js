@@ -17,8 +17,8 @@ class Comments extends React.Component {
       <div>
         <ul className="comment-section">
           { this.state.comments &&
-            this.state.comments.map((comment) => {
-              return (<Comment comment={ comment }></Comment>);
+            this.state.comments.map((comment, index) => {
+              return (<Comment key={ `comment-${index}` } comment={ comment }></Comment>);
             }) }
           <li className="write-new">
             <form>

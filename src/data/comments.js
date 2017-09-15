@@ -42,11 +42,36 @@ const comments = [
         postId: 2,
         content: ('Ah, you\'re one of those....')
     },
+
+
+    {
+        commentId: 6,
+        postedBy: ' Other person ',
+        postedAt: ' on September 30, 2018 ',
+        postId: 3,
+        content: ('Huh, I guess he finally got tired of posting the same comment over and over again. Well alright.')
+    },
+    {
+        commentId: 7,
+        postedBy: ' My girl my girl my girl ',
+        postedAt: ' on September 30, 2018 ',
+        postId: 3,
+        content: ('I made some comments!')
+    },
+    {
+        commentId: 8,
+        postedBy: ' Other person ',
+        postedAt: ' on September 30, 2018 ',
+        postId: 3,
+        content: ('I hate you.')
+    },
+
+
 ];
 
 
 CommentModel.getComments = (postId) => {
-    return comments.filter(comment => comment.postId === postId);
+    return comments.filter(comment => comment.postId.toString() === postId.toString());
 };
 
 export default CommentModel;
