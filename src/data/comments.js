@@ -70,5 +70,10 @@ CommentModel.getComments = (postId) => {
     return comments.filter(comment => comment.postId.toString() === postId.toString());
 };
 
+CommentModel.addComment = (comment) => {
+    // Should probably validate this.
+    comments.push(comment);
+};
+
 export default CommentModel;
 
