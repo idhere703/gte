@@ -71,7 +71,7 @@ CommentModel.getComments = (postId) => {
 };
 
 CommentModel.addComment = (comment) => {
-    // Should probably validate this.
+    // Should probably validate this. And also hook up the backend.
     comments.push(comment);
 };
 

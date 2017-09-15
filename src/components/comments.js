@@ -24,7 +24,7 @@ class Comments extends React.Component {
             <form>
               <textarea placeholder="Write your comment here" name="comment"></textarea>
               <div>
-                <button type="submit">Submit</button>
+                <button>Submit</button>
               </div>
             </form>
           </li>
