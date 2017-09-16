@@ -1,4 +1,5 @@
 import React from 'react';
+import commentsData from '../data/comments';
 
 class Comment extends React.Component {
 
@@ -9,7 +10,7 @@ class Comment extends React.Component {
           <a href="#">
             { this.props.comment.postedBy }
           </a>
-          <span>{ this.props.comment.postedAt }</span>
+          <span>{ `${commentsData.formatCommentDate(this.props.comment.postedAt)}` }</span>
         </div>
         <p>
           { this.props.comment.content }
