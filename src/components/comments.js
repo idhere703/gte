@@ -19,7 +19,14 @@ class Comments extends React.Component {
       commentVal: event.target.value
     });
   }
-  handleCommentAdd(comment) {}
+  handleCommentAdd(comment) {
+    const cs = this.state.comments;
+    cs.push(comment);
+    this.setState({
+      comments: cs,
+      commentVal: ''
+    });
+  }
 
   render() {
     return (
@@ -32,7 +39,7 @@ class Comments extends React.Component {
           <li className="write-new">
             <textarea placeholder="Write your comment here" name="comment" value={ this.state.commentVal } onChange={ this.handleChange }></textarea>
             <div>
-              <button onClick={ this.handleCommentAdd({
+              <button onClick={ () => this.handleCommentAdd({
                                   postedAt: moment().format('MMMM DD YYYY'),
                                   postedBy: 'This guy',
                                   content: this.state.commentVal,
