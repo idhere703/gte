@@ -30,7 +30,7 @@ class BlogPosts extends React.Component {
                     <Link to="#">
                     { post.postedBy }
                     </Link>
-                    { post.postedAt }
+                    { `On ${post.postedAt}` }
                   </p>
                 </div>
                 <hr/>

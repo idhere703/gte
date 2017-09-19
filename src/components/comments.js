@@ -40,7 +40,7 @@ class Comments extends React.Component {
             <textarea placeholder="Write your comment here" name="comment" value={ this.state.commentVal } onChange={ this.handleChange }></textarea>
             <div>
               <button onClick={ () => this.handleCommentAdd({
-                                  postedAt: moment().format('MMMM DD YYYY'),
+                                  postedAt: commentsData.formatCommentDate(moment()),
                                   postedBy: 'This guy',
                                   content: this.state.commentVal,
                                   postId: this.props.postId,
