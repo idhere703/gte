@@ -20,12 +20,23 @@ class Comments extends React.Component {
     });
   }
   handleCommentAdd(comment) {
-    const cs = this.state.comments;
-    cs.push(comment);
-    this.setState({
-      comments: cs,
-      commentVal: ''
-    });
+    if (comment.content === 'I made some comments!') {
+      const cs = this.state.comments;
+      cs.push(comment);
+      cs.push(commentsData.getRandomComment(cs, this.props.postId));
+      this.setState({
+        comments: cs,
+        commentVal: ''
+      });
+    } else {
+      const cs = this.state.comments;
+      cs.push(comment);
+      this.setState({
+        comments: cs,
+        commentVal: ''
+      });
+    }
+
   }
 
   render() {
@@ -41,7 +52,7 @@ class Comments extends React.Component {
             <div>
               <button onClick={ () => this.handleCommentAdd({
                                   postedAt: commentsData.formatCommentDate(moment()),
-                                  postedBy: 'This guy',
+                                  postedBy: 'Anonymous',
                                   content: this.state.commentVal,
                                   postId: this.props.postId,
                                   commentId: this.state.comments.length

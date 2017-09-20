@@ -81,5 +81,22 @@ CommentModel.addComment = (comment) => {
     comments.push(comment);
 };
 
+CommentModel.getRandomComment = (comments, postId) => {
+    const spamHates = [
+        'Who are you!?',
+        'GO AWAY!!!',
+        'I give up...',
+        'No one expects the spanish inquisition!'
+    ];
+    const spamHate = spamHates[Math.floor(Math.random() * spamHates.length)];
+    return {
+        postedAt: CommentModel.formatCommentDate(moment()),
+        postedBy: 'Other person',
+        content: spamHate,
+        postId: postId,
+        commentId: comments.length
+    };
+};
+
 export default CommentModel;
 
