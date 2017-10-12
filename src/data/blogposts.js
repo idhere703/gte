@@ -10,6 +10,7 @@ const posts = [
     title: 'Man must explore, and this is exploration at its greatest',
     subtitle: 'Problems look mighty small from 150 miles up',
     postedBy: ' My girl my girl my girl ',
+    active: true,
     postedAt: PostModel.formatPostDate(new Date(2016, 9, 24)),
     postId: 0,
     imgClass: 'post-header-space',
@@ -18,6 +19,7 @@ const posts = [
     title: 'No one rejects, dislikes, or avoids pleasure itself, because it is pleasure',
     subtitle: 'but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.',
     postedBy: ' Other persona ',
+    active: true,
     postedAt: PostModel.formatPostDate(new Date(2016, 9, 18)),
     postId: 1,
     imgClass: 'post-header-cisero',
@@ -27,6 +29,7 @@ const posts = [
     title: 'A wonderful serenity has taken possession of my entire soul',
     subtitle: 'like these sweet mornings of spring which I enjoy with my whole heart.',
     postedBy: ' Someone ',
+    active: true,
     postedAt: PostModel.formatPostDate(new Date(2016, 8, 24)),
     postId: 2,
     imgClass: 'post-header-werther',
@@ -35,6 +38,7 @@ const posts = [
     title: 'One morning, when Gregor Samsa woke from troubled dreams',
     subtitle: 'he found himself transformed in his bed into a horrible vermin.',
     postedBy: ' Kafka ',
+    active: true,
     postedAt: PostModel.formatPostDate(new Date(2016, 8, 15)),
     postId: 3,
     imgClass: 'post-header-kafka',
@@ -44,7 +48,7 @@ const posts = [
 
 
 PostModel.getPosts = () => {
-  return posts;
+  return posts.filter(post => post.active === true);
 };
 
 /**
@@ -53,7 +57,7 @@ PostModel.getPosts = () => {
  * @return {Object}     The post that matches the passed id. Or undefined if not found.
  */
 PostModel.getPost = (id) => {
-  return posts.find((post) => id === post.postId.toString());
+  return posts.find((post) => id === post.postId.toString() && post.active === true);
 };
 
 PostModel.getMostRecentPost = () => {
